@@ -4,12 +4,9 @@ AI-assisted fetal ultrasound plane finding in novice blind sweeps. Moringa Schoo
 
 A lightweight model that watches a short ultrasound sweep (about 200 pictures) taken by a midwife with little training, finds the key views of the baby (head, tummy, heart, spine, thigh bone), keeps the best pictures for a specialist and answers "Good scan" or "Please scan again". Exploratory extras: a breech flag and a brain defect screening step with safe, non-diagnostic messages.
 
-Study prototype only. It is not a medical device, does not diagnose and has not been clinically validated.
-
 Repository
-File	What it is
 taswira_final_short_results.ipynb	Main notebook, run end to end, with results and conclusions
-README.md	This file
+README.md
 Data (not included; download separately)
 Dataset	Use	Link
 NatalIA PBF-US1 (dummy-belly blind sweeps)	Training and main test	Zenodo
@@ -24,6 +21,7 @@ FETAL_PLANES_DB/FETAL_PLANES_DB_data.csv  (+ images)
 African_planes/Zenodo_dataset/African_planes_database.csv  (+ images)
 Fetal Brain Abnormalities Ultrasound.v1i.multiclass.zip
 taswira_final_short_results.ipynb
+
 How to run
 bash
 pip install tensorflow==2.15 scikit-learn pandas numpy matplotlib seaborn pillow ipywidgets
@@ -44,8 +42,6 @@ Right view on real African scans: dummy only → with Spanish images	21 → 80 i
 Phone-ready model size	7.1 MB
 Breech flag accuracy (dummy)	82 in 100 (guessing: 54)
 Brain defect check: own dataset / normal African heads flagged	AUC 1.00 / 25% false alarms
-
-Main finding: practice data from a dummy belly alone does not carry over to real scans; adding real images is essential.
 
 Limitations
 
